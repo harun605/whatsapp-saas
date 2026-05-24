@@ -46,8 +46,10 @@ export async function POST(req: NextRequest) {
     }
 
     const message = messages[0]
-    const fromNumber = message.from           // hastanın numarası: "905321234567"
-    const toNumber = value.metadata.display_phone_number // botun numarası
+    const fromNumber = message.from
+    const toNumber = value.metadata.display_phone_number
+    console.log('Gelen numara:', fromNumber)
+    console.log('Bot numarası:', toNumber)
     const messageText = message.text?.body
 
     // Sadece metin mesajlarını işle
